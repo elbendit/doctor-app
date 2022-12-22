@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/symptomssection.dart';
 import 'widgets/search.dart';
 import 'widgets/topbar.dart';
 
@@ -43,10 +44,13 @@ class TopSection extends StatelessWidget {
         child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [TopBar(), Search()
-            
+            children: [
+              TopBar(),
+              Search(),
+              SymptomsSection()
             ]),
       ),
     );
   }
 }
+
