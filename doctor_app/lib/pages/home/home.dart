@@ -43,7 +43,9 @@ class TopSection extends StatelessWidget {
         child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [TopBar(), Search()]),
+            children: [TopBar(), Search()
+            
+            ]),
       ),
     );
   }

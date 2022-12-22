@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/home/home.dart';
-import 'package:doctor_app/utils/Constans.dart';
+import 'package:doctor_app/utils/constans.dart';
 
 void main() {
   runApp(const MyApp());

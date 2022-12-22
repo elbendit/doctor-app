@@ -8,17 +8,17 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Expanded(
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Container(
-              width: 1080,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: Color(0xffd6d6d6),
+                  color: Color.fromARGB(255, 80, 76, 76),
                   width: 1,
                 ),
               ),
@@ -27,9 +27,10 @@ class Search extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   Icon(
                     Icons.search,
+                    color: Color.fromARGB(255, 80, 76, 76),
                   ),
                   Expanded(
                     child: Text(
@@ -40,6 +41,7 @@ class Search extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Icon(Icons.filter_alt, color: Color.fromARGB(255, 80, 76, 76))
                 ],
               ),
             ),
