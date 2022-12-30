@@ -34,37 +34,25 @@ class SymptomsSection extends StatelessWidget {
             ),
           ],
         ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Color(0xff4c4ddc),
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 8,
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Snuffle 🤧 ",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
-                ),
+        /*        ListView(
+                    padding: const EdgeInsets.all(8),
+          children: <Widget> [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Color(0xff4c4ddc),
               ),
+              padding:  EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 8,
+              ),
+              child: Text(
+                    "Snuffle 🤧 ",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
             ),
             Container(
               decoration: BoxDecoration(
@@ -114,9 +102,122 @@ class SymptomsSection extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Color(0xfff5f5ff),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 8,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "High Fever 🤒️",
+                    style: TextStyle(
+                      color: Color(0xffa0a6b1),
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Color(0xfff5f5ff),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 8,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "High Fever 🤒️",
+                    style: TextStyle(
+                      color: Color(0xffa0a6b1),
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Color(0xfff5f5ff),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 8,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "High Fever 🤒️",
+                    style: TextStyle(
+                      color: Color(0xffa0a6b1),
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Color(0xfff5f5ff),
+              ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 8,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "High Fever 🤒️",
+                    style: TextStyle(
+                      color: Color(0xffa0a6b1),
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
-        ),
-      ],
+          scrollDirection: Axis.horizontal,
+        );
+      */
+        final List<String> entries = <String>['A', 'B', 'C'];
+final List<int> colorCodes = <int>[600, 500, 100];
+
+Widget build(BuildContext context) {
+  return ListView.builder(
+    padding: const EdgeInsets.all(8),
+    itemCount: entries.length,
+    itemBuilder: (BuildContext context, int index) {
+      return Container(
+        height: 50,
+        color: Colors.amber[colorCodes[index]],
+        child: Center(child: Text('Entry ${entries[index]}')),
+      );
+    }
+  );
+}],
     );
   }
 }
