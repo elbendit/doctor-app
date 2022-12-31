@@ -7,34 +7,33 @@ class SymptomsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "Your symptoms?",
-              style: TextStyle(
-                color: Color(0xff333333),
-                fontSize: 16,
-                fontFamily: "Inter",
-                fontWeight: FontWeight.w700,
-              ),
+    return Column(children: [
+      Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            "Your symptoms?",
+            style: TextStyle(
+              color: Color(0xff333333),
+              fontSize: 16,
+              fontFamily: "Inter",
+              fontWeight: FontWeight.w700,
             ),
-            Text(
-              "See All",
-              style: TextStyle(
-                color: Color.fromARGB(255, 80, 76, 76),
-                fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: FontWeight.w500,
-              ),
+          ),
+          Text(
+            "See All",
+            style: TextStyle(
+              color: Color.fromARGB(255, 80, 76, 76),
+              fontSize: 14,
+              fontFamily: "Inter",
+              fontWeight: FontWeight.w500,
             ),
-          ],
-        ),
-        /*        ListView(
+          ),
+        ],
+      ),
+      /*        ListView(
                     padding: const EdgeInsets.all(8),
           children: <Widget> [
             Container(
@@ -202,22 +201,6 @@ class SymptomsSection extends StatelessWidget {
           scrollDirection: Axis.horizontal,
         );
       */
-        final List<String> entries = <String>['A', 'B', 'C'];
-final List<int> colorCodes = <int>[600, 500, 100];
-
-Widget build(BuildContext context) {
-  return ListView.builder(
-    padding: const EdgeInsets.all(8),
-    itemCount: entries.length,
-    itemBuilder: (BuildContext context, int index) {
-      return Container(
-        height: 50,
-        color: Colors.amber[colorCodes[index]],
-        child: Center(child: Text('Entry ${entries[index]}')),
-      );
-    }
-  );
-}],
-    );
+    ]);
   }
 }

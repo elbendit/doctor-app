@@ -1,6 +1,6 @@
-import 'package:doctor_app/pages/home/widgets/favouritedoctor.dart';
-import 'package:doctor_app/pages/home/widgets/symptomssection.dart';
-import 'package:doctor_app/pages/home/widgets/topdoctor.dart';
+import 'favouritedoctor.dart';
+import 'symptomssection.dart';
+import 'topdoctor.dart';
 import 'package:flutter/material.dart';
 
 class MiddleSection extends StatelessWidget {
@@ -22,4 +22,3 @@ class MiddleSection extends StatelessWidget {
     );
   }
 }
-
