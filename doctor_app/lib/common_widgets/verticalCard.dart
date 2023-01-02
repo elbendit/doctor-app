@@ -6,8 +6,8 @@ class VerticalCard extends StatelessWidget {
   final String name;
   final double rating;
   final String location;
-  final double imageWidth;
-  final double imageHeight;
+  final double cardWidth;
+  final double cardHeight;
 
   final double borderRadius = 35;
 
@@ -17,70 +17,75 @@ class VerticalCard extends StatelessWidget {
     required this.name,
     required this.rating,
     required this.location,
-    required this.imageWidth,
-    required this.imageHeight,
+    required this.cardWidth,
+    required this.cardHeight,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 10,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(borderRadius),
-      ),
-      child: Column(children: [
-        CachedNetworkImage(
-            width: imageWidth,
-            height: imageHeight,
-            imageUrl: imageUrl,
-            imageBuilder: (context, imageProvider) => Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(borderRadius),
-                        topRight: Radius.circular(borderRadius)),
-                    image:
-                        DecorationImage(image: imageProvider, fit: BoxFit.fill),
-                  ),
-                ),
-            placeholder: (context, url) => CircularProgressIndicator(),
-            errorWidget: (context, url, error) => Icon(Icons.error)),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-          child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Expanded(
-              flex: 2,
-              child: Row(
-                children: [
-                  Text(name),
-                ],
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(
-                    Icons.star,
-                    size: 20,
-                    color: Colors.yellow,
-                  ),
-                  Text(rating.toString()),
-                ],
-              ),
-            ),
-          ]),
+    return SizedBox(
+      width: cardWidth,
+      height: cardHeight,
+      child: Card(
+        elevation: 10,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
-        Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: Column(children: [
+          CachedNetworkImage(
+              width: cardWidth,
+              height: cardHeight / 2,
+              imageUrl: imageUrl,
+              imageBuilder: (context, imageProvider) => Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(borderRadius),
+                          topRight: Radius.circular(borderRadius)),
+                      image: DecorationImage(
+                          image: imageProvider, fit: BoxFit.fill),
+                    ),
+                  ),
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(location),
-              ],
-            ))
-      ]),
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Row(
+                      children: [
+                        Text(name),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          size: 20,
+                          color: Colors.yellow,
+                        ),
+                        Text(rating.toString()),
+                      ],
+                    ),
+                  ),
+                ]),
+          ),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(location),
+                ],
+              ))
+        ]),
+      ),
     );
   }
 }

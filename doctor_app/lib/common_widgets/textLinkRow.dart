@@ -9,7 +9,7 @@ class TestLinkRow extends StatelessWidget {
     Key? key,
     required this.subtitle,
     required this.linkText,
-    this.linkUrl = "http://",
+    required this.linkUrl,
   }) : super(key: key);
 
   @override
