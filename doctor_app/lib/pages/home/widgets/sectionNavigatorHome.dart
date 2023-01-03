@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 
-class SectionNavigatorHome extends StatelessWidget {
-  const SectionNavigatorHome({
-    Key? key,
-  }) : super(key: key);
+class SectionNavigatorHome extends StatefulWidget {
+  const SectionNavigatorHome({super.key});
 
   @override
+  State<SectionNavigatorHome> createState() => _SectionNavigatorHomeState();
+}
+
+class _SectionNavigatorHomeState extends State<SectionNavigatorHome> {
+  @override
   Widget build(BuildContext context) {
-    return Row();
+    return BottomNavigationBarItem(
+      items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+        BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: ""),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.description_rounded), label: ""),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.description_rounded), label: ""),
+      ],
+    );
   }
 }
