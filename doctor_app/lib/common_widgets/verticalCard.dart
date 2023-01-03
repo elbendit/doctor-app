@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:doctor_app/common_widgets/radiusLow.dart';
 import 'package:flutter/material.dart';
 
 class VerticalCard extends StatelessWidget {
@@ -10,7 +9,7 @@ class VerticalCard extends StatelessWidget {
   final double cardWidth;
   final double cardHeight;
 
-  final double borderRadius = 30;
+  final double borderRadius = 25;
 
   const VerticalCard({
     Key? key,
@@ -30,7 +29,7 @@ class VerticalCard extends StatelessWidget {
       child: Card(
         elevation: 10,
         shape: RoundedRectangleBorder(
-          borderRadius: context.radiusLow,
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
         child: Column(children: [
           CachedNetworkImage(
