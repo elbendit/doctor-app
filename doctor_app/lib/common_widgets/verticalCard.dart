@@ -9,7 +9,7 @@ class VerticalCard extends StatelessWidget {
   final double cardWidth;
   final double cardHeight;
 
-  final double borderRadius = 35;
+  final double borderRadius = 30;
 
   const VerticalCard({
     Key? key,

@@ -1,7 +1,9 @@
 import 'package:doctor_app/common_widgets/listviewHo.dart';
+import 'package:doctor_app/common_widgets/symptomsChip.dart';
 import 'package:doctor_app/common_widgets/verticalCard.dart';
 import 'package:flutter/material.dart';
 import '../../common_widgets/textLinkRow.dart';
+import 'widgets/sectionNavigatorHome.dart';
 import 'widgets/topsection.dart';
 import 'widgets/middlesection.dart';
 
@@ -24,9 +26,10 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+    return ListView(children: [
       TopSection(),
       MiddleSection(),
+      SectionNavigatorHome(),
     ]);
   }
 }

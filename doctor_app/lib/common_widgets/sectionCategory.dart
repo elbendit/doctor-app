@@ -6,6 +6,8 @@ class SectionCategory extends StatelessWidget {
   final String subtitle;
   final String linkText;
   final String linkUrl;
+  final double heightListView;
+
   final List<Widget> widgetList;
 
   const SectionCategory({
@@ -14,6 +16,7 @@ class SectionCategory extends StatelessWidget {
     required this.linkText,
     this.linkUrl = "http://",
     required this.widgetList,
+    required this.heightListView,
   }) : super(key: key);
 
   @override
@@ -28,7 +31,8 @@ class SectionCategory extends StatelessWidget {
             child: TestLinkRow(
                 subtitle: subtitle, linkText: linkText, linkUrl: linkUrl),
           ),
-          SizedBox(height: 200, child: ListviewHo(widgetList: widgetList))
+          SizedBox(
+              height: heightListView, child: ListviewHo(widgetList: widgetList))
         ]);
   }
 }
