@@ -10,7 +10,7 @@ class SectionNavigatorHome extends StatefulWidget {
 class _SectionNavigatorHomeState extends State<SectionNavigatorHome> {
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBarItem(
+    return BottomNavigationBar(
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
         BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: ""),
