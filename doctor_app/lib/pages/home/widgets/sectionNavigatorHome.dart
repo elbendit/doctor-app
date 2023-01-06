@@ -8,9 +8,16 @@ class SectionNavigatorHome extends StatefulWidget {
 }
 
 class _SectionNavigatorHomeState extends State<SectionNavigatorHome> {
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: index,
+      onTap: (int i) {
+        setState(() {
+          index = i;
+        });
+      },
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
