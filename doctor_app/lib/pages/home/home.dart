@@ -1,8 +1,4 @@
-import 'package:doctor_app/common_widgets/listviewHo.dart';
-import 'package:doctor_app/common_widgets/symptomsChip.dart';
-import 'package:doctor_app/common_widgets/verticalCard.dart';
 import 'package:flutter/material.dart';
-import '../../common_widgets/textLinkRow.dart';
 import 'widgets/sectionNavigatorHome.dart';
 import 'widgets/topsection.dart';
 import 'widgets/middlesection.dart';

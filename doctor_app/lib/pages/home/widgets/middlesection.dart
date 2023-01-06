@@ -1,3 +1,4 @@
+import 'package:doctor_app/common_widgets/daHorizontalCard.dart';
 import 'package:doctor_app/common_widgets/sectionCategory.dart';
 import 'package:doctor_app/common_widgets/verticalCard.dart';
 
@@ -27,6 +28,11 @@ class MiddleSection extends StatelessWidget {
               linkText: "See all",
               widgetList: _getDoctorCards,
               heightListView: 200),
+          SectionCategory(
+              subtitle: "Top Doctor",
+              linkText: "See all",
+              widgetList: _getTopDoctors,
+              heightListView: 200)
 
           //FavouriteDoctor(),
           //TopDoctor(),
@@ -43,6 +49,17 @@ class MiddleSection extends StatelessWidget {
       SymptomsChip(identificationSymptomsChip: "Snuffle 🤧 "),
       SymptomsChip(identificationSymptomsChip: "High Fever 🤒️"),
       SymptomsChip(identificationSymptomsChip: "Nauseous 🤮")
+    ];
+  }
+
+  List<Widget> get _getTopDoctors {
+    return [
+      DaHorizontalCard(
+          imageUrl:
+              "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+          cardHeight: 300,
+          cardWidth: 300,
+          dAdTviews: 4521),
     ];
   }
 
