@@ -1,3 +1,4 @@
+import 'package:doctor_app/common_widgets/daHorizontalCard.dart';
 import 'package:doctor_app/common_widgets/sectionCategory.dart';
 import 'package:doctor_app/common_widgets/symptomsChip.dart';
 import 'package:doctor_app/common_widgets/verticalCard.dart';
@@ -25,26 +26,32 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: [
-        Column(mainAxisSize: MainAxisSize.min, children: [
-          TopSection(),
-          SectionCategory(
-              subtitle: "Symptoms",
-              linkText: "See all",
-              widgetList: _getSymptomsChips,
-              heightListView: 80),
-          SectionCategory(
-              subtitle: "Favourite doctor",
-              linkText: "See all",
-              widgetList: _getDoctorCards,
-              heightListView: 200),
-          SectionCategory(
-              subtitle: "Favourite doctor",
-              linkText: "See all",
-              widgetList: _getDoctorCards,
-              heightListView: 200),
-        ]),
+        Expanded(
+          child: ListView(
+            children: [
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                TopSection(),
+                SectionCategory(
+                    subtitle: "Symptoms",
+                    linkText: "See all",
+                    widgetList: _getSymptomsChips,
+                    heightListView: 80),
+                SectionCategory(
+                    subtitle: "Favourite doctor",
+                    linkText: "See all",
+                    widgetList: _getDoctorCards,
+                    heightListView: 200),
+                SectionCategory(
+                    subtitle: "Favourite doctor",
+                    linkText: "See all",
+                    widgetList: _getDoctorTop,
+                    heightListView: 200),
+              ]),
+            ],
+          ),
+        ),
         SectionNavigatorHome()
       ],
     );
@@ -59,6 +66,17 @@ List<Widget> get _getSymptomsChips {
     SymptomsChip(identificationSymptomsChip: "Snuffle 🤧 "),
     SymptomsChip(identificationSymptomsChip: "High Fever 🤒️"),
     SymptomsChip(identificationSymptomsChip: "Nauseous 🤮")
+  ];
+}
+
+List<Widget> get _getDoctorTop {
+  return [
+    DaHorizontalCard(
+        cardHeight: 300,
+        cardWidth: 300,
+        imageUrl:
+            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+        dAdTviews: 4519)
   ];
 }
 
