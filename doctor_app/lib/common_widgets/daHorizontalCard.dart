@@ -57,12 +57,15 @@ class DaHorizontalCard extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Text("Dr. BErlin Elizerd"),
-                            Icon(Icons.favorite)
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text("Dr. BErlin Elizerd"),
+                              Icon(size: 12, Icons.favorite)
+                            ],
+                          ),
                         ),
                         Text("Location"),
                         Row(
