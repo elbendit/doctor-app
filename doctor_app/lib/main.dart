@@ -1,3 +1,7 @@
+import 'package:doctor_app/pages/calendar/calendar.dart';
+import 'package:doctor_app/pages/exams/exams.dart';
+import 'package:doctor_app/pages/home/homePage.dart';
+import 'package:doctor_app/pages/profile/profile.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/home/home.dart';
@@ -16,6 +20,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Constants.appName,
       home: MyHomePage(),
+      routes: {
+        '/home': (context) => MyHomePage(),
+        '/calendar': (context) => Calendario(),
+        '/exams': (context) => Exams(),
+        '/profile': (context) => Profile(),
+      },
     );
   }
 }

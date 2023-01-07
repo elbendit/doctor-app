@@ -14,6 +14,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: HomeContent(),
+      bottomNavigationBar: SectionNavigatorHome(index: 0),
       // widget);
     );
   }
@@ -52,7 +53,6 @@ class HomeContent extends StatelessWidget {
             ],
           ),
         ),
-        SectionNavigatorHome()
       ],
     );
   }
