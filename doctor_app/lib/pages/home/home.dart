@@ -1,4 +1,5 @@
 import 'package:doctor_app/common_widgets/daHorizontalCard.dart';
+import 'package:doctor_app/common_widgets/infoIcon.dart';
 import 'package:doctor_app/common_widgets/sectionCategory.dart';
 import 'package:doctor_app/common_widgets/symptomsChip.dart';
 import 'package:doctor_app/common_widgets/verticalCard.dart';

@@ -1,6 +1,6 @@
 import 'package:doctor_app/pages/calendar/calendar.dart';
+import 'package:doctor_app/pages/detailsDoctor/detailsDoctor.dart';
 import 'package:doctor_app/pages/exams/exams.dart';
-import 'package:doctor_app/pages/home/homePage.dart';
 import 'package:doctor_app/pages/profile/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/calendar': (context) => Calendario(),
         '/exams': (context) => Exams(),
         '/profile': (context) => Profile(),
+        '/detailsDoctor': (context) => DetailsDoctor(),
       },
     );
   }
