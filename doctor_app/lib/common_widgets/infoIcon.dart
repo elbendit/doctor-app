@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
 
 class InfoIcon extends StatelessWidget {
-  final String iron;
   final double cantidad;
   final String indication;
+  final IconData iconData;
 
   const InfoIcon(
       {super.key,
-      required this.iron,
       required this.cantidad,
-      required this.indication});
+      required this.indication,
+      required this.iconData});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        children: [
-          Icon(Icons.iron),
-          Text(cantidad.toString()),
-          Text(indication)
-        ],
+        children: [Icon(iconData), Text(cantidad.toString()), Text(indication)],
       ),
     );
   }
