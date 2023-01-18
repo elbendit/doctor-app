@@ -3,6 +3,7 @@ import 'package:doctor_app/common_widgets/infoIcon.dart';
 import 'package:doctor_app/common_widgets/sectionCategory.dart';
 import 'package:doctor_app/common_widgets/symptomsChip.dart';
 import 'package:doctor_app/common_widgets/verticalCard.dart';
+import 'package:doctor_app/core/objetcs.dart';
 import 'package:flutter/material.dart';
 import 'widgets/sectionNavigatorHome.dart';
 import 'widgets/topsection.dart';
@@ -60,14 +61,14 @@ class HomeContent extends StatelessWidget {
 }
 
 List<Widget> get _getSymptomsChips {
-  return [
-    SymptomsChip(identificationSymptomsChip: "Snuffle 🤧 "),
-    SymptomsChip(identificationSymptomsChip: "High Fever 🤒️"),
-    SymptomsChip(identificationSymptomsChip: "Nauseous 🤮"),
-    SymptomsChip(identificationSymptomsChip: "Snuffle 🤧 "),
-    SymptomsChip(identificationSymptomsChip: "High Fever 🤒️"),
-    SymptomsChip(identificationSymptomsChip: "Nauseous 🤮")
-  ];
+  List<Widget> listaSymptomsChip = [];
+
+  for (var element in misObj) {
+    listaSymptomsChip
+        .add(SymptomsChip(identificationSymptomsChip: element['textoX']));
+  }
+
+  return listaSymptomsChip;
 }
 
 List<Widget> get _getDoctorTop {
