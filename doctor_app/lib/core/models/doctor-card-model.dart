@@ -15,12 +15,16 @@ class DoctorCardModel {
       required this.imageUrl});
 
   DoctorCardModel.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    rating = json['rating'];
-    cardHeight = json['cardHeight'];
-    cardWidth = json['cardWidth'];
-    location = json['location'];
-    imageUrl = json['imageUrl'];
+    try {
+      name = json['name'];
+      rating = json['rating'];
+      cardHeight = json['cardHeight'];
+      cardWidth = json['cardWidth'];
+      location = json['location'];
+      imageUrl = json['imageUrl'];
+    } catch (e) {
+      print(e);
+    }
   }
 
   Map<String, dynamic> toJson() {
