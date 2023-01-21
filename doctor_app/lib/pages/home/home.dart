@@ -3,6 +3,7 @@ import 'package:doctor_app/common_widgets/infoIcon.dart';
 import 'package:doctor_app/common_widgets/sectionCategory.dart';
 import 'package:doctor_app/common_widgets/symptomsChip.dart';
 import 'package:doctor_app/common_widgets/verticalCard.dart';
+import 'package:doctor_app/core/models/doctor-card-model.dart';
 import 'package:doctor_app/core/objetcs.dart';
 import 'package:flutter/material.dart';
 import 'widgets/sectionNavigatorHome.dart';
@@ -84,15 +85,17 @@ List<Widget> get _getDoctorTop {
 
 List<Widget> get _getDoctorCards {
   List<Widget> listCardDoctor = [];
+  List<DoctorCardModel> listModel = [];
 
-  for (var element in myDoctorCardsJson) {
+  for (var elementJson in myDoctorCardsJson) {
+    DoctorCardModel model = DoctorCardModel.fromJson(elementJson);
     listCardDoctor.add(VerticalCard(
-        imageUrl: element["imageUrl"],
-        name: element["name"],
-        rating: element["rating"],
-        location: element["location"],
-        cardHeight: element["cardHeight"],
-        cardWidth: element["cardWidth"]));
+        imageUrl: model.imageUrl,
+        name: model.name,
+        rating: model.rating,
+        location: model.location,
+        cardHeight: model.cardHeight,
+        cardWidth: model.cardWidth));
   }
 
   return listCardDoctor;
