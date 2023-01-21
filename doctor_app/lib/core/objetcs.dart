@@ -90,3 +90,5 @@ List<Map<String, dynamic>> myDoctorCardsJson = [
         "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000"
   },
 ];
+
+Map<String, dynamic> iconJson = {"iconName": "star"};
