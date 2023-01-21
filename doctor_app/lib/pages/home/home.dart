@@ -63,7 +63,7 @@ class HomeContent extends StatelessWidget {
 List<Widget> get _getSymptomsChips {
   List<Widget> listaSymptomsChip = [];
 
-  for (var element in misObj) {
+  for (var element in mySympthoms) {
     listaSymptomsChip
         .add(SymptomsChip(identificationSymptomsChip: element['textoX']));
   }
@@ -83,78 +83,17 @@ List<Widget> get _getDoctorTop {
 }
 
 List<Widget> get _getDoctorCards {
-  return [
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200),
-    VerticalCard(
-        imageUrl:
-            "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
-        name: "name",
-        rating: 4.5,
-        location: "location",
-        cardHeight: 200,
-        cardWidth: 200)
-  ];
+  List<Widget> listCardDoctor = [];
+
+  for (var element in myDoctorCardsJson) {
+    listCardDoctor.add(VerticalCard(
+        imageUrl: element["imageUrl"],
+        name: element["name"],
+        rating: element["rating"],
+        location: element["location"],
+        cardHeight: element["cardHeight"],
+        cardWidth: element["cardWidth"]));
+  }
+
+  return listCardDoctor;
 }
